@@ -10,21 +10,18 @@ private:
     int year;
 
 public:
-    // Constructor
     Book(string t, string a, int y) {
         title = t;
         author = a;
         year = y;
     }
 
-    // Method to display book details
     void display() {
         cout << "Title: " << title << endl;
         cout << "Author: " << author << endl;
         cout << "Year: " << year << endl;
     }
 
-    // Get title for searching
     string getTitle() {
         return title;
     }
@@ -35,13 +32,11 @@ private:
     vector<Book> books;
 
 public:
-    // Method to add a book
     void addBook(string title, string author, int year) {
         books.push_back(Book(title, author, year));
         cout << "Book added successfully!" << endl;
     }
 
-    // Method to display all books
     void displayBooks() {
         cout << "Book List:" << endl;
         cout << "Title\t\t\tAuthor\t\tYear" << endl;
@@ -51,7 +46,6 @@ public:
         }
     }
 
-    // Method to search for a book by title
     void searchBook(string searchTitle) {
         for (Book &book : books) {
             if (book.getTitle() == searchTitle) {
